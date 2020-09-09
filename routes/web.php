@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::resource('albums', 'AlbumController');
+
+Route::resource('songs', 'SongController');

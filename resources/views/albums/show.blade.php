@@ -10,7 +10,7 @@
 
 <ul>
     @foreach ($album->songs as $song)
-        <li>{{ $song->title }} - <a href="#">info</a></li>
+        <li>{{ $song->title }} - <a href="{{ route('songs.show', $song) }}">info</a></li>
     @endforeach
 </ul>
 

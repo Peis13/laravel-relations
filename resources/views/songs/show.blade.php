@@ -1,7 +1,12 @@
-<h2>{{ $song->title }}</h2>
+@extends('layouts.app')
 
-<img src="{{ $song->album->image->cover }}" alt="{{ $song->album->title }}">
+@section('main_content')
+    <h2>{{ $song->title }}</h2>
 
-<p>artista: {{ $song->album->artist }}</p>
-<p>genere: {{ $song->genre }}</p>
-<p>anno: {{ $song->album->year }}</p>
+    <img src="{{ $song->album->image->cover }}" alt="{{ $song->album->title }}">
+
+    <p>album: {{ $song->album->title }}</p>
+    <p>artista: {{ $song->album->artist }}</p>
+    <p>genere: {{ $song->genre }}</p>
+    <p>anno: {{ $song->album->year }}</p>
+@endsection

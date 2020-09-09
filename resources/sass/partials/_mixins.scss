@@ -1,0 +1,20 @@
+// GENERALI
+@mixin flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+// FINE GENERALI
+
+// HEADER
+@mixin logo {
+    color: $colore_primario;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+// FINE HEADER

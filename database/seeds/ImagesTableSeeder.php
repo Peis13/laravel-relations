@@ -13,7 +13,7 @@ class ImagesTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i=0; $i < 3; $i++) {
+        for ($i=0; $i < 10; $i++) {
             $new_image = new Image();
             $new_image->cover = $faker->imageUrl();
             $new_image->album_id = $i + 1;

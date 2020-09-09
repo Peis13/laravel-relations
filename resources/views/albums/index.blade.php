@@ -1,11 +1,45 @@
 @extends('layouts.app')
 
-@section('main_content')
-    <h2>lista albums</h2>
+@section('page_title')
+    ALBUM
+@endsection
 
-    <ul>
+@section('section_id')
+    album-list
+@endsection
+
+@section('section_class')
+    album-list
+@endsection
+
+@section('main_content')
+    <h2>lista album</h2>
+
+    {{-- ALBUM-LIST --}}
+    <ul class="list">
         @foreach ($albums as $album)
-            <li>{{ $album->title }} - <a href="{{ route('albums.show', $album) }}">dettagli</a></li>
+
+            {{-- Album --}}
+            <li class="album list-item">
+                <a class="album-cover" href="{{ route('albums.show', $album) }}">
+
+                    {{-- album-cover --}}
+                    <img src="{{ $album->image->cover }}" alt="{{ $album->title }}">
+
+                    {{-- filter --}}
+                    <div class="filter">
+                        <span class="show-info">
+                            info
+                        </span>
+                    </div>
+                </a>
+
+                {{-- album-title --}}
+                <span class="album-title">{{ $album->title }}</span>
+                <span class="album-artist">{{ $album->artist }}</span>
+            </li>
+            {{-- Fine Album --}}
         @endforeach
     </ul>
+    {{-- FINE ALBUM-LIST --}}
 @endsection

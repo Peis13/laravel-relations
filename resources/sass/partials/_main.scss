@@ -1,0 +1,29 @@
+main {
+    height: calc(100vh - #{$header_height});
+    overflow-x: auto;
+    background-color: $body_bg_color;
+
+    .album-list {
+        text-align: center;
+
+        .container {
+            .list {
+                @include flex;
+                flex-wrap: wrap;
+
+                .album {
+                    @include list-item;
+
+                    &-title {
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+                    }
+                    &-artist {
+                        font-size: 15px;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+}

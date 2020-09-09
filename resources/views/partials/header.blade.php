@@ -5,12 +5,12 @@
 
         {{-- logo --}}
         <div class="logo">
-            <span>bool-tune</span>
+            <span>bool_<br>_tune</span>
         </div>
         {{-- fine logo --}}
 
-        {{-- navigazione --}}
-        <nav class="navigazione">
+        {{-- navigation --}}
+        <nav class="navigation">
 
             <ul class="nav-menu">
                 <li class="nav-li">
@@ -25,7 +25,7 @@
             </ul>
 
         </nav>
-        {{-- fine navigazione --}}
+        {{-- fine navigation --}}
     </div>
     {{-- Fine Navbar --}}
 </header>

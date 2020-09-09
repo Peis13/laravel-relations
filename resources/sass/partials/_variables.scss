@@ -1,8 +1,17 @@
 // GRANDEZZE
-$header_altezza: 90px;
-// FINE GRANDEZZE
+$container_width: 70%;
+$header_height: 90px;
+$navigation_width: 30%;
+$list_item_width: calc(100% / 4);
 
 // COLORI
-$colore_primario: #54aedb;
-$colore_secondario: #283131;
-// FINE COLORI
+$primary_color: #54aedb;
+$secondary_color: #283131;
+$body_color: #cae9eb;
+$body_bg_color: #1a1e1e;
+
+// FONT
+$logo_font_size: 30px;
+
+// PADDING
+$list_item_padding: 20px;

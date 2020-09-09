@@ -1,7 +1,5 @@
 header {
-    height: $header_altezza;
-    background-color: $colore_secondario;
-    border-bottom: 2px solid black;
+    @include header;
 
     .navbar {
         height: 100%;
@@ -11,21 +9,11 @@ header {
         .logo {
             @include logo;
         }
-        .navigazione {
-            height: 100%;
-            width: 30%;
-            margin: auto;
+        .navigation {
+            @include navigazione;
 
             .nav-menu {
-                height: 100%;
-                padding-bottom: 10px;
-                @include flex;
-                justify-content: space-between;
-                align-items: flex-end;
-
-                .nav-li {
-
-                }
+                @include nav_menu;
             }
         }
     }

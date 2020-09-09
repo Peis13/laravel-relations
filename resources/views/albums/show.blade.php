@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('page_title')
+    {{ $album->title }}
+@endsection
+
 @section('main_content')
     <h2>titolo album: {{ $album->title }}</h2>
     <img src="{{ $album->image->cover }}" alt="{{ $album->title }}">

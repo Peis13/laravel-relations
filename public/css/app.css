@@ -4,24 +4,75 @@
   box-sizing: border-box;
 }
 
+body {
+  color: #cae9eb;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 35px;
+  margin: 10px 0;
+}
+
 ul {
   list-style-type: none;
 }
 
 a {
-  color: #54aedb;
+  color: inherit;
   text-decoration: none;
   display: inline-block;
 }
 
-a:hover {
-  text-decoration: underline;
+img {
+  width: 100%;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+.section {
+  padding: 50px 20px;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.filter .show-info {
+  display: none;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filter:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.filter:hover .show-info {
+  display: block;
+}
+
+[class*=-cover] {
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 header {
   height: 90px;
+  border-bottom: 2px solid #cae9eb;
   background-color: #283131;
-  border-bottom: 2px solid black;
 }
 
 header .navbar {
@@ -41,17 +92,59 @@ header .navbar .logo {
   transform: translateY(-50%);
 }
 
-header .navbar .navigazione {
+header .navbar .navigation {
   height: 100%;
   width: 30%;
   margin: auto;
 }
 
-header .navbar .navigazione .nav-menu {
+header .navbar .navigation .nav-menu {
+  display: flex;
   height: 100%;
   padding-bottom: 10px;
-  display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+header .navbar .navigation .nav-menu .nav-link {
+  color: #54aedb;
+}
+
+header .navbar .navigation .nav-menu .nav-link:hover {
+  text-decoration: underline;
+}
+
+main {
+  height: calc(100vh - 90px);
+  overflow-x: auto;
+  background-color: #1a1e1e;
+}
+
+main .album-list {
+  text-align: center;
+}
+
+main .album-list .container .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .album-list .container .list .album {
+  width: calc(100% / 4);
+  padding: 20px;
+}
+
+main .album-list .container .list .album > span {
+  display: block;
+}
+
+main .album-list .container .list .album-title {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+main .album-list .container .list .album-artist {
+  font-size: 15px;
+  font-style: italic;
 }
 

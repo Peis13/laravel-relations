@@ -7,17 +7,47 @@
 // FINE RESET
 
 // STILI GENERALI
+body {
+    color: $body_color;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
 ul {
     list-style-type: none;
 }
 
 a {
-    color: $colore_primario;
+    color: inherit;
     text-decoration: none;
     display: inline-block;
+}
 
-    &:hover {
-        text-decoration: underline;
-    }
+img {
+    width: 100%;
+}
+
+.container {
+    width: $container_width;
+    margin: auto;
+}
+
+.section {
+    padding: 50px 20px;
+}
+
+.filter {
+    @include filter;
+}
+
+[class*="-cover"] {
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
 }
 // FINE STILI GENERALI

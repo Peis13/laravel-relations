@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('page_title')
+    {{ $song->title }}
+@endsection
+
 @section('main_content')
     <h2>{{ $song->title }}</h2>
 

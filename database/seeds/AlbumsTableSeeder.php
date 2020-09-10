@@ -11,9 +11,9 @@ class AlbumsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run(Faker $faker, Album $n_album_test)
     {
-        for ($i=0; $i < 10; $i++) {
+        for ($i=0; $i < $n_album_test; $i++) {
             $new_album = new Album();
             $new_album->title = $faker->sentence(2);
             $new_album->artist = $faker->name;

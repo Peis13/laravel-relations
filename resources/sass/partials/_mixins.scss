@@ -58,6 +58,9 @@
     > span {
         display: block;
     }
+    .caption {
+        font-size: $album_caption_index_font_size;
+    }
 }
 
 @mixin filter {

@@ -2,10 +2,25 @@ main {
     height: calc(100vh - #{$header_height});
     overflow-x: auto;
     background-color: $body_bg_color;
+    text-align: center;
 
-    .album-list {
-        text-align: center;
+    // Album pages common
+    > [class*="album-"] {
+        .album-title {
+            text-transform: uppercase;
+        }
+        .album-artist {
+            font-style: italic;
+        }
+    }
+    .redirect {
+        display: block;
+        text-align: right;
+        margin-top: 20px;
+    }
 
+    // Album-list page
+    #album-list {
         .container {
             .list {
                 @include flex;
@@ -15,13 +30,35 @@ main {
                     @include list-item;
 
                     &-title {
-                        text-transform: uppercase;
                         margin-bottom: 5px;
                     }
-                    &-artist {
-                        font-size: 15px;
-                        font-style: italic;
-                    }
+                }
+            }
+        }
+    }
+
+    // Album-show page
+    #album-show {
+        .show-top {
+            .album-cover {
+                width: $cover_show_width;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+            .album-info {
+                .caption{
+                    font-size: $album_caption_show_font_size;
+                }
+            }
+        }
+        .show-bottom {
+            text-align: left;
+
+            .songs-list {
+                .song {
+                    @include flex;
+                    justify-content: space-between;
+                    padding: 15px 0;
                 }
             }
         }

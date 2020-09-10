@@ -10,9 +10,21 @@ body {
   font-size: 20px;
 }
 
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+
 h2 {
   font-size: 35px;
   margin: 10px 0;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 7px 0;
 }
 
 ul {
@@ -29,8 +41,17 @@ img {
   width: 100%;
 }
 
-.container {
+hr {
+  margin: 40px auto 20px;
+}
+
+[class*=-list] > .container {
   width: 70%;
+  margin: auto;
+}
+
+[class*=-show] > .container {
+  width: 40%;
   margin: auto;
 }
 
@@ -63,7 +84,11 @@ img {
   display: block;
 }
 
-[class*=-cover] {
+.caption {
+  color: #869596;
+}
+
+[class*=-list] [class*=-cover] {
   cursor: pointer;
   margin-bottom: 10px;
   position: relative;
@@ -118,33 +143,62 @@ main {
   height: calc(100vh - 90px);
   overflow-x: auto;
   background-color: #1a1e1e;
-}
-
-main .album-list {
   text-align: center;
 }
 
-main .album-list .container .list {
+main > [class*=album-] .album-title {
+  text-transform: uppercase;
+}
+
+main > [class*=album-] .album-artist {
+  font-style: italic;
+}
+
+main .redirect {
+  display: block;
+  text-align: right;
+  margin-top: 20px;
+}
+
+main #album-list .container .list {
   display: flex;
   flex-wrap: wrap;
 }
 
-main .album-list .container .list .album {
+main #album-list .container .list .album {
   width: calc(100% / 4);
   padding: 20px;
 }
 
-main .album-list .container .list .album > span {
+main #album-list .container .list .album > span {
   display: block;
 }
 
-main .album-list .container .list .album-title {
-  text-transform: uppercase;
+main #album-list .container .list .album .caption {
+  font-size: 15px;
+}
+
+main #album-list .container .list .album-title {
   margin-bottom: 5px;
 }
 
-main .album-list .container .list .album-artist {
-  font-size: 15px;
-  font-style: italic;
+main #album-show .show-top .album-cover {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+main #album-show .show-top .album-info .caption {
+  font-size: 18px;
+}
+
+main #album-show .show-bottom {
+  text-align: left;
+}
+
+main #album-show .show-bottom .songs-list .song {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
 }
 

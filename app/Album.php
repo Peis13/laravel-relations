@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Album extends Model
 {
-    public $n_album_test = 10;
-
     protected $fillable = [
         'title',
         'artist',
@@ -21,4 +19,8 @@ class Album extends Model
     public function image() {
         return $this->hasOne('App\Image');
     }
+
+        public function artists() {
+            return $this->belongsToMany('App\Artist');
+        }
 }

@@ -13,9 +13,21 @@ body {
     font-size: 20px;
 }
 
+h2,
+h3,
+h4,
+h5, {
+    font-weight: normal;
+}
+
 h2 {
-    font-size: 35px;
+    font-size: $h2_font_size;
     margin: 10px 0;
+}
+
+h3 {
+    font-size: $h3_font_size;
+    margin: 7px 0;
 }
 
 ul {
@@ -32,9 +44,21 @@ img {
     width: 100%;
 }
 
-.container {
-    width: $container_width;
-    margin: auto;
+hr {
+    margin: 40px auto 20px;
+}
+[class*="-list"] {
+    > .container {
+        width: $container_list_width;
+        margin: auto;
+    }
+}
+
+[class*="-show"] {
+    > .container {
+        width: $container_show_width;
+        margin: auto;
+    }
 }
 
 .section {
@@ -45,9 +69,15 @@ img {
     @include filter;
 }
 
-[class*="-cover"] {
-    cursor: pointer;
-    margin-bottom: 10px;
-    position: relative;
+.caption {
+    color: $caption_color;
+}
+
+[class*="-list"] {
+    [class*="-cover"] {
+        cursor: pointer;
+        margin-bottom: 10px;
+        position: relative;
+    }
 }
 // FINE STILI GENERALI

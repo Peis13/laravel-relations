@@ -1,17 +1,24 @@
 // GRANDEZZE
-$container_width: 70%;
+$container_list_width: 70%;
+$container_show_width: 40%;
 $header_height: 90px;
 $navigation_width: 30%;
 $list_item_width: calc(100% / 4);
+$cover_show_width: 60%;
 
 // COLORI
 $primary_color: #54aedb;
 $secondary_color: #283131;
 $body_color: #cae9eb;
 $body_bg_color: #1a1e1e;
+$caption_color: #869596;
 
 // FONT
+$h2_font_size: 35px;
+$h3_font_size: 25px;
 $logo_font_size: 30px;
+$album_caption_index_font_size: 15px;
+$album_caption_show_font_size:18px;
 
 // PADDING
 $list_item_padding: 20px;

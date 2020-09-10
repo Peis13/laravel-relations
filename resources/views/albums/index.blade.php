@@ -1,16 +1,10 @@
 @extends('layouts.app')
 
-@section('page_title')
-    ALBUM
-@endsection
+@section('page_title'){{ 'ALBUM' }}@endsection
 
-@section('section_id')
-    album-list
-@endsection
+@section('section_id'){{ 'album-list' }}@endsection
 
-@section('section_class')
-    album-list
-@endsection
+@section('section_class'){{ 'album-list' }}@endsection
 
 @section('main_content')
     <h2>lista album</h2>
@@ -35,8 +29,8 @@
                 </a>
 
                 {{-- album-title --}}
-                <span class="album-title">{{ $album->title }}</span>
-                <span class="album-artist">{{ $album->artist }}</span>
+                <h4 class="album-title">{{ $album->title }}</h4>
+                <h5 class="album-artist caption">{{ $album->artists->name }}</h5>
             </li>
             {{-- Fine Album --}}
         @endforeach

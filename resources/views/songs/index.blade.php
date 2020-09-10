@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-@section('page_title')
-    CANZONI
-@endsection
+@section('page_title'){{ 'CANZONI' }}@endsection
 
 @section('main_content')
     <h2>lista completa canzoni</h2>

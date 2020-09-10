@@ -1,25 +1,54 @@
 @extends('layouts.app')
 
-@section('page_title')
-    {{ $album->title }}
-@endsection
+@section('page_title'){{ $album->title }}@endsection
+
+@section('section_id'){{ 'album-show' }}@endsection
+
+@section('section_class'){{ 'album-show' }}@endsection
 
 @section('main_content')
-    <h2>titolo album: {{ $album->title }}</h2>
-    <img src="{{ $album->image->cover }}" alt="{{ $album->title }}">
 
-    <div>
-        <p>artista: {{ $album->artist }}</p>
-        <p>anno: {{ $album->year }}</p>
+    {{-- TOP --}}
+    <div class="show-top">
+
+        {{-- Album-cover --}}
+        <div class="album-cover">
+            <img src="{{ $album->image->cover }}" alt="{{ $album->title }}">
+        </div>
+
+        {{-- Album-info --}}
+        <div class="album-info">
+
+            {{-- title --}}
+            <h3 class="album-title">{{ $album->title }}</h3>
+
+            {{-- caption --}}
+            <div class="caption">
+                <span class="album-artist">{{ $album->artist }}</span>
+                &nbsp;&nbsp;&#9679;&nbsp;
+                <span class="album-year">{{ $album->year }}</span>
+            </div>
+        </div>
     </div>
+    {{-- FINE TOP --}}
 
-    <h3>lista canzoni</h3>
+    <hr>
 
-    <ul>
-        @foreach ($album->songs as $song)
-            <li>{{ $song->title }} - <a href="{{ route('songs.show', $song) }}">info</a></li>
-        @endforeach
-    </ul>
+    {{-- BOTTOM --}}
+    <div class="show-bottom">
+        <ul class="songs-list">
+            @foreach ($album->songs as $song)
 
-    <a href="{{ route('albums.index') }}">torna all'indice</a>
+                {{-- Song --}}
+                <li class="song">
+                    <span class="song-title">{{ $song->title }}</span>
+                    <a class="info" href="{{ route('songs.show', $song) }}">>></a>
+                </li>
+
+            @endforeach
+        </ul>
+    </div>
+    {{-- FINE BOTTOM --}}
+
+    <a class="redirect" href="{{ route('albums.index') }}">torna all'indice</a>
 @endsection

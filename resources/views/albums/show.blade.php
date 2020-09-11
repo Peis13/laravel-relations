@@ -24,7 +24,22 @@
 
             {{-- caption --}}
             <div class="caption">
-                <span class="album-artist">{{ $album->artist }}</span>
+
+                {{-- ciclo l'array di artisti --}}
+                @foreach ($album->artists as $key => $artist)
+                    {{-- @dd((count($album->artists) - 1)) //2 --}}
+                    {{-- @dd($key) --}}
+                    {{-- @dd($album->artists) --}}
+                    {{-- <span class="album-artist">{{ $artist->name }}{{','}}</span> --}}
+                    <span class="album-artist">{{ $artist->name }}
+
+                    @if ($key != (count($album->artists) - 1))
+                        {{','}}
+                    @endif
+                    
+                    </span>
+                @endforeach
+
                 &nbsp;&nbsp;&#9679;&nbsp;
                 <span class="album-year">{{ $album->year }}</span>
             </div>

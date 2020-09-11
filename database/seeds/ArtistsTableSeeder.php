@@ -26,6 +26,7 @@ class ArtistsTableSeeder extends Seeder
             $new_artist->date_of_birth = $faker->date('d M Y');
 
             $new_artist->save();
+            // $new_album->artists()->attach(rand(1, 10));
         }
     }
 }

@@ -30,7 +30,11 @@
 
                 {{-- album-title --}}
                 <h4 class="album-title">{{ $album->title }}</h4>
-                <h5 class="album-artist caption">{{ $album->artists->name }}</h5>
+
+                {{-- ciclo l'array di artisti --}}
+                @foreach ($album->artists as $artist)
+                    <h5 class="album-artist caption">{{ $artist->name }}</h5>
+                @endforeach
             </li>
             {{-- Fine Album --}}
         @endforeach
